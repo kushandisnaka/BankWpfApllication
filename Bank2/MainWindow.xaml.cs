@@ -17,7 +17,7 @@ namespace Bank2
     public partial class MainWindow : Window
     {
 
-        
+        public string Username { get; set; }
         BankDbContext db;
         public MainWindow()
         {
@@ -47,6 +47,7 @@ namespace Bank2
             if (user.Email == email && user.Password == password)
             {
                 MessageBox.Show("Login Successful");
+                Username = email;
             }
 
 
@@ -100,7 +101,7 @@ namespace Bank2
             };
             home.onChangePasswordClick += (sender, e) =>
             {
-                var change = new Change();
+                var change = new Change(Username);
                 change.onChangeClick += (sender, e) =>
                 {
                    

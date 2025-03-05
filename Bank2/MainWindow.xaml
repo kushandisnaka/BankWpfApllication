@@ -69,7 +69,7 @@
                 </Grid>
             </TabItem>
             
-            <TabItem Header="Login" Foreground="Black" FontWeight="Bold" Background=" #799BDB"   FontSize="18" Padding="10" Margin="-2,0,0,0">
+            <TabItem Header="Login" Foreground="Black" FontWeight="Bold" Background=" #799BDB"   FontSize="18" Padding="10" Margin="-2,0,0,0" Height="44" VerticalAlignment="Top">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>

@@ -26,10 +26,12 @@ namespace Bank2
 
         BankDbContext db;
         public event EventHandler<EventArgs>? onChangeClick;
+        public string UserName { get; set; }
 
-        public Change()
+        public Change(string username)
         {
             InitializeComponent();
+            UserName = username;
             db = new();
           
 
@@ -42,11 +44,11 @@ namespace Bank2
             string confirmNewPassword = ConfirmPassword1.Text;
 
 
-            var user = db.Users.ToList().Find(u => u.Password == currentPassword);
+            var user = db.Users.ToList().Find(u => u.Password == currentPassword && u.Email == UserName);
 
 
             //var user = db.Users.ToList().Find(u => u.Id == loggedInUser.Id);
-            if (user == null || user.Password != currentPassword)
+            if (user == null)
             {
                 MessageBox.Show("Incorrect current password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -57,7 +59,7 @@ namespace Bank2
                 return;
             }
             user.Password = newPassword;
-            db.Users.Add(user);
+            db.Users.Update(user);
             db.SaveChanges();
             MessageBox.Show("Password changed successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             onChangeClick?.Invoke(this, EventArgs.Empty);
