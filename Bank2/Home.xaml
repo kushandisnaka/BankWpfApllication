@@ -1,0 +1,39 @@
+﻿<Page x:Class="Bank2.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Bank2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home"
+    
+      >
+
+    <Page.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="AliceBlue" Offset="0"/>
+            <GradientStop Color="LightBlue" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+    
+    
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button Height="40" Width="110" Margin="10" Content="Transfer Money" Background="#799BDB" FontWeight="Bold" Click="FundBtn_click"/>
+            <Button Height="40" Width="110" Margin="10" Content="Bill Payment" Background="#799BDB" FontWeight="Bold" Click="BillPayment_Click" />
+            <Button Height="40" Width="110" Margin="10" Content="About us" Background="#799BDB" FontWeight="Bold"/>
+            <Button Height="40" Width="110" Margin="10" Content="Change Password" Background="#799BDB" FontWeight="Bold" Click="ChangePasswordBtn_Click" /> 
+            <Button Height="40" Width="110" Margin="10" Content="Delet Account" Background="#799BDB" FontWeight="Bold" Click="DeletBtn_Click"/>
+            <Button Height="40" Width="110" Margin="10" Content="Log out" Background="#799BDB" FontWeight="Bold" Click="LogOut_Click" />
+
+        </StackPanel>
+        <StackPanel VerticalAlignment="top" Margin="90,0,20,0">
+            <TextBlock Text="Neo Banker" FontSize="35" FontWeight="DemiBold" TextAlignment="Center" Margin="10"></TextBlock>
+           
+            <Image Source="/Iamges/pexels-reiner-sct-140938854-10330121.jpg" Width="510" Height="300" Stretch="Fill"  />
+           
+        </StackPanel>
+    </Grid>
+</Page>
