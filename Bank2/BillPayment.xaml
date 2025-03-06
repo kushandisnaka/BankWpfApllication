@@ -22,7 +22,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-          
+
 
         </Grid.RowDefinitions>
         <TextBlock Text="Bill Payment" FontSize="24" FontWeight="Bold" Foreground="black"
@@ -32,7 +32,18 @@
         <TextBox Name="FromAccount" Grid.Row="1" Margin="100,0,0,5" Width="300" Height="24"/>
 
         <TextBlock Text="Bill Payee Category:" Foreground="Black" Margin="110,10,0,0" Grid.Row="2"/>
-        <TextBox Name="ToAccount" Grid.Row="2" Margin="100,10,0,5" Width="300" Height="24"/>
+
+        <TextBlock Text="Bill Payee Category:" Foreground="Black" Margin="110,10,0,0" Grid.Row="2" />
+        <ComboBox Name="ToAccount" Grid.Row="2" Margin="100,10,0,5" Width="300" Height="24" >
+            <ComboBoxItem Content="Electricity Bill"/>
+            <ComboBoxItem Content="Water Bill"/>
+            <ComboBoxItem Content="Internet Bill"/>
+            <ComboBoxItem Content="Mobile Recharge"/>
+            <ComboBoxItem Content="Credit Card Payment"/>
+        </ComboBox>
+        
+
+
 
         <TextBlock Text="Account Number:" Foreground="Black" Margin="110,10,0,0" Grid.Row="3"/>
         <TextBox Name="Amount" Grid.Row="3" Margin="100,10,0,5" Width="300" Height="24"/>
